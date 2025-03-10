@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body {
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      font-family: 'IranSans', 'Segoe UI', Tahoma, sans-serif;
+    }
+    .resume-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+    }
+    .section-heading {
+      border-bottom: 2px solid #0a66c2;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: right;
+    }
+    .contact-item {
+      display: inline-block;
+      margin: 0.5rem 0.5rem 0.5rem 1rem;
+      color: #555;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .skills li {
+      background: #e7f5ff;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+      margin: 0.5rem;
+      font-weight: 500;
+    }
+    .social-icons a {
+      color: #333;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0a66c2;
+    }
+    .experience-bullet {
+        margin-right: 10px; padding: 0;
+    list-style: disc url(images/ico-bullet_round.gif);
+    direction:rtl;
+      /* position: relative; */
+    }
+    .experience-bullet::before {
+      /* position: absolute; */
+      left: -1rem;
+      direction:rtl;
+
+    }
+    ul {
+        list-style-type: square;
+    }
+    @media (max-width: 768px) {
+      .resume-container {
+        padding: 2rem;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h1 class="display-6 text-primary mb-3">امیررضا برخورداری</h1>
+      <br>
+      <div class="social-icons">
+        <div class="d-flex flex-column flex-md-row justify-content-center mb-4">
+            <div class="px-4" >
+                <i class="bi bi-telephone-fill"></i>
+                <span>09205956472</span>                
+            </div>
+            <div >
+                <i class="bi bi-envelope-fill"></i>
+                <span>amirrezabarkhordaribusiness@gmail.com</span>
+            </div>
+        </div>
+      </div>
+      <p class="lead mt-3">توسعه‌دهنده وب | مهندس نرم افزار</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-lg-8">
+        <section class="mb-5">
+          <h3 class="section-heading"><i class="fas fa-briefcase me-2"></i>تجربه کاری</h2>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">توسعه‌دهنده وب</h5>
+              <h6 class="card-subtitle mb-3 text-muted">شرکت AMC Electronic | فروردین 1402 - خرداد 1403</h6>
+              <ul class="list-unstyled">
+                <li class="experience-bullet">راه اندازی سایت اشتراک سرور برای دستگاه IOT</li>
+                <li class="experience-bullet">طراحی و پیاده‌سازی APIهای RESTful و فرانت blazor</li>
+                <li class="experience-bullet">راه اندازی client برای سرور mqtt</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">توسعه‌دهنده backend</h5>
+              <h6 class="card-subtitle mb-3 text-muted">شرکت آرین سیستم | خرداد 1403 - مهر 1403</h6>
+              <ul class="list-unstyled">
+                <li class="experience-bullet">توسعه پروژه Erp با استفاده از معماری میکروسرویس</li>
+              </ul>
+            </div>
+          </div> <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">توسعه‌دهنده  backend</h5>
+              <h6 class="card-subtitle mb-3 text-muted">شرکت نیک آموز | آبان 1403 - اکنون</h6>
+              <ul class="list-unstyled">
+                <li class="experience-bullet">راه اندازی Identity Server</li>
+                <li class="experience-bullet">راه اندازی سیستم DMS</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5">
+          <h3 class="section-heading"><i class="fas fa-project-diagram me-2"></i>پروژه‌ها</h2>
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title text-primary">سامانه CRM</h5>
+              <p class="card-text">پیاده‌سازی سامانه مدیریت محتوا </p>
+              <a href="/" class="btn btn-outline-primary btn-sm">مشاهده پروژه</a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-4">
+        <section class="mb-5">
+          <h3 class="section-heading"><i class="fas fa-code me-2"></i>مهارت‌ها</h2>
+          <ul class="list-unstyled skills">
+            <li>C#</li>
+            <li>Asp.net Core</li>
+            <li>OOP</li>
+            <li>Clean Code</li>
+            <li>RestFul API</li>
+            <li>EF Core</li>
+            <li>Blazor</li>
+            <li>DDD</li>
+            <li>Jira</li>
+            <li>Git</li>
+          </ul>
+        </section>
+
+        <section class="mb-5">
+          <h3 class="section-heading"><i class="fas fa-graduation-cap me-2"></i>تحصیلات</h2>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-primary">کارشناسی مهندسی نرم‌افزار</h5>
+              <h6 class="card-subtitle mb-2 text-muted">دانشگاه آزاد | 1401-1398</h6>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
