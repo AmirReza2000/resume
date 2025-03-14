@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" >
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="رزومه امیررضا برخورداری - توسعه‌دهنده وب و مهندس نرم افزار">
-  <meta name="theme-color" content="#0a66c2">
+  <meta name="theme-color" content="#0ea5e9">
   <title>رزومه امیررضا برخورداری | توسعه‌دهنده وب</title>
   
   <!-- Preload critical assets -->
@@ -16,104 +16,256 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- Print styles -->
-  <style media="print">
-    .resume-container {
-      box-shadow: none !important;
-      margin: 0 !important;
-    }
-    .card:hover {
-      transform: none !important;
-    }
-    @page {
-      margin: 2cm;
-    }
-  </style>
-
   <style>
-    body {
-      background: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-      font-family: 'IranSans', 'Segoe UI', Tahoma, sans-serif;
+    :root {
+      --primary-color: #0ea5e9;
+      --primary-light: #38bdf8;
+      --primary-dark: #0284c7;
+      --secondary-color: #64748b;
+      --accent-color: #06b6d4;
+      --background-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --border-color: #e2e8f0;
     }
-    .resume-container {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 3rem;
-    }
-    .section-heading {
-      border-bottom: 2px solid #0a66c2;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      text-align: right;
-      color: #3b8cde;
-    }
-    .contact-item {
-      display: inline-block;
-      margin: 0.5rem 0.5rem 0.5rem 1rem;
-      color: #555;
-    }
-    .card {
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-      margin-bottom: 1.5rem;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .skills li {
-      background: #e7f5ff;
-      border-radius: 20px;
-      padding: 0.5rem 1rem;
-      display: inline-block;
-      margin: 0.5rem;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
-    }
-    .skills li:hover {
-      background: #d0ebff;
-    }
-    .social-icons a {
-      color: #333;
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-    .social-icons a:hover {
-      color: #0b5fb3;
-    }
-    .contact-info {
-      transition: color 0.3s ease;
-      color: #3b8cde;
 
+    @font-face {
+      font-family: 'Vazir';
+      src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.2.2/dist/Vazir-Regular.woff2') format('woff2');
     }
-    .contact-info:hover {
-      color: #0a66c2;
+
+    body {
+      background: var(--background-color);
+      color: var(--text-primary);
+      line-height: 1.8;
+      font-family: 'Vazir', 'IranSans', 'Segoe UI', Tahoma, sans-serif;
     }
-    .experience-bullet {
-      margin-right: 1rem;
+
+    .resume-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      padding: 4rem;
       position: relative;
-      padding-right: 1rem;
+      overflow: hidden;
     }
-    .experience-bullet::before {
+
+    .resume-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    }
+
+    .header-section {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    .header-section::after {
+      content: '';
+      position: absolute;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 3px;
+    }
+
+    .profile-name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-title {
+      font-size: 1.25rem;
+      color: var(--secondary-color);
+      margin-bottom: 2rem;
+    }
+
+    .contact-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #f1f5f9;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .contact-item:hover {
+      background: #e2e8f0;
+      transform: translateY(-2px);
+      color: var(--primary-color);
+    }
+
+    .section-heading {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--primary-light);
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--accent-color);
+    }
+
+    .experience-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-color: var(--primary-light);
+    }
+
+    .experience-title {
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .experience-company {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .experience-date {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: #f1f5f9;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .experience-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+    }
+
+    .experience-item {
+      position: relative;
+      padding-right: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .experience-item::before {
       content: "•";
       position: absolute;
-      right: -1rem;
-      color: #0a66c2;
+      right: 0;
+      color: var(--primary-color);
+      font-weight: bold;
     }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-item {
+      background: #f1f5f9;
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .skill-item:hover {
+      background: #e2e8f0;
+      transform: translateY(-2px);
+      color: var(--primary-color);
+    }
+
+    .education-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .education-title {
+      font-size: 1.25rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .education-school {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .gpa-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #f1f5f9;
+      border-radius: 20px;
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
     @media (max-width: 768px) {
       .resume-container {
-        padding: 1.5rem;
+        padding: 2rem;
         margin: 1rem;
       }
+
+      .profile-name {
+        font-size: 2rem;
+      }
+
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+      }
     }
+
     @media print {
       body {
         background: white;
@@ -121,149 +273,135 @@
       .resume-container {
         box-shadow: none;
       }
+      .experience-card:hover {
+        transform: none;
+        box-shadow: none;
+      }
     }
   </style>
 </head>
 <body>
   <main class="resume-container">
-    <!-- Header -->
-    <header class="text-center mb-5">
-      <h1 class="display-6 text-dark mb-3">امیررضا برخورداری</h1>
+    <!-- Header Section -->
+    <header class="header-section">
+      <h1 class="profile-name">امیررضا برخورداری</h1>
+      <p class="profile-title">توسعه‌دهنده وب | مهندس نرم افزار</p>
       <div class="contact-section">
-        <div class="d-flex flex-column flex-md-row justify-content-center mb-4">
-          <a href="tel:09205956472" class="px-4 contact-info text-decoration-none" aria-label="شماره تماس">
-            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
-            <span>09205956472</span>
-          </a>
-          <a href="mailto:amirrezabarkhordaribusiness@gmail.com" class="contact-info text-decoration-none" aria-label="ایمیل">
-            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-            <span>amirrezabarkhordaribusiness@gmail.com</span>
-          </a>
-        </div>
+        <a href="tel:09205956472" class="contact-item">
+          <i class="bi bi-telephone-fill"></i>
+          <span>09205956472</span>
+        </a>
+        <a href="mailto:amirrezabarkhordaribusiness@gmail.com" class="contact-item">
+          <i class="bi bi-envelope-fill"></i>
+          <span>amirrezabarkhordaribusiness@gmail.com</span>
+        </a>
       </div>
-      <p class="lead mt-3">توسعه‌دهنده وب | مهندس نرم افزار</p>
     </header>
 
-    <!-- Main Content -->
     <div class="row">
       <!-- Left Column -->
       <div class="col-lg-8">
-        <section class="mb-5" aria-labelledby="experience-heading">
-          <h2 id="experience-heading" class="section-heading">
-            <i class="fas fa-briefcase me-2" aria-hidden="true"></i>تجربه کاری
+        <!-- Experience Section -->
+        <section class="mb-5">
+          <h2 class="section-heading">
+            <i class="fas fa-briefcase me-2"></i>تجربه کاری
           </h2>
-          <div class="timeline">
-            <article class="card mb-3">
-              <div class="card-body">
-                <h3 class="card-title text-primary h5">توسعه‌دهنده وب</h3>
-                <p class="card-subtitle mb-3 text-muted">شرکت AMC Electronic | فروردین 1402 - خرداد 1403</p>
-                <ul class="list-unstyled achievements">
-                  <li class="experience-bullet">راه اندازی سایت اشتراک سرور برای دستگاه IOT</li>
-                  <li class="experience-bullet">طراحی و پیاده‌سازی APIهای RESTful و فرانت blazor</li>
-                  <li class="experience-bullet">راه اندازی client برای سرور mqtt</li>
-                </ul>
-              </div>
-            </article>      
-            <article class="card mb-3">
-              <div class="card-body">
-                <h3 class="card-title text-primary h5">توسعه‌دهنده backend</h3>
-                <p class="card-subtitle mb-3 text-muted">شرکت آرین سیستم | خرداد 1403 - مهر 1403</p>
-                <ul class="list-unstyled achievements">
-                  <li class="experience-bullet">توسعه پروژه Erp با استفاده از معماری میکروسرویس</li>
-                </ul>
-              </div>
-            </article>
-            <article class="card mb-3">
-              <div class="card-body">
-                <h3 class="card-title text-primary h5">توسعه‌دهنده backend</h3>
-                <p class="card-subtitle mb-3 text-muted">شرکت نیک آموز | آبان 1403 - اکنون</p>
-                <ul class="list-unstyled achievements">
-                  <li class="experience-bullet">راه اندازی Identity Server</li>
-                  <li class="experience-bullet">راه اندازی سیستم DMS</li>
-                </ul>
-              </div>
-            </article>
+          
+          <div class="experience-card">
+            <h3 class="experience-title">توسعه‌دهنده backend</h3>
+            <p class="experience-company">شرکت نیک آموز</p>
+            <span class="experience-date">آبان 1403 - اکنون</span>
+            <ul class="experience-list">
+              <li class="experience-item">راه اندازی Identity Server</li>
+              <li class="experience-item">راه اندازی سیستم DMS</li>
+            </ul>
+          </div>
+
+          <div class="experience-card">
+            <h3 class="experience-title">توسعه‌دهنده backend</h3>
+            <p class="experience-company">شرکت آرین سیستم</p>
+            <span class="experience-date">خرداد 1403 - مهر 1403</span>
+            <ul class="experience-list">
+              <li class="experience-item">توسعه پروژه Erp با استفاده از معماری میکروسرویس</li>
+            </ul>
+          </div>
+
+          <div class="experience-card">
+            <h3 class="experience-title">توسعه‌دهنده وب</h3>
+            <p class="experience-company">شرکت AMC Electronic</p>
+            <span class="experience-date">فروردین 1402 - خرداد 1403</span>
+            <ul class="experience-list">
+              <li class="experience-item">راه اندازی سایت اشتراک سرور برای دستگاه IOT</li>
+              <li class="experience-item">طراحی و پیاده‌سازی APIهای RESTful و فرانت blazor</li>
+              <li class="experience-item">راه اندازی client برای سرور mqtt</li>
+            </ul>
           </div>
         </section>
 
-        <section class="mb-5" aria-labelledby="projects-heading">
-          <h2 id="projects-heading" class="section-heading">
-            <i class="fas fa-project-diagram me-2" aria-hidden="true"></i>پروژه‌ها
+        <!-- Projects Section -->
+        <section class="mb-5">
+          <h2 class="section-heading">
+            <i class="fas fa-project-diagram me-2"></i>پروژه‌ها
           </h2>
-          <article class="card mb-3">
-            <div class="card-body">
-              <h3 class="card-title text-primary h5">سامانه CRM</h3>
-              <p class="card-text">پیاده‌سازی سامانه مدیریت محتوا با قابلیت‌های پیشرفته</p>
-              <div class="project-tech mt-3">
-                <span class="badge bg-light text-dark me-2">ASP.NET Core</span>
-                <span class="badge bg-light text-dark me-2">Clean Architecture</span>
-                <span class="badge bg-light text-dark">SQL Server</span>
-              </div>
+          <div class="experience-card">
+            <h3 class="experience-title">سامانه CRM</h3>
+            <p class="experience-company">پیاده‌سازی سامانه مدیریت محتوا با قابلیت‌های پیشرفته</p>
+            <div class="skills-grid">
+              <span class="skill-item">ASP.NET Core</span>
+              <span class="skill-item">Clean Architecture</span>
+              <span class="skill-item">SQL Server</span>
             </div>
-          </article>
+          </div>
         </section>
       </div>
 
       <!-- Right Column -->
       <div class="col-lg-4">
-        <section class="mb-5" aria-labelledby="skills-heading">
-          <h2 id="skills-heading" class="section-heading">
-            <i class="fas fa-code me-2" aria-hidden="true"></i>مهارت‌ها
+        <!-- Skills Section -->
+        <section class="mb-5">
+          <h2 class="section-heading">
+            <i class="fas fa-code me-2"></i>مهارت‌ها
           </h2>
-          <div class="skills-container">
-            <h3 class="h6 mb-3 text-muted">مهارت‌های اصلی</h3>
-            <ul class="list-unstyled skills">
-              <li class="skill-item">C#</li>
-              <li class="skill-item">Asp.net Core</li>
-              <li class="skill-item">OOP</li>
-              <li class="skill-item">Clean Code</li>
-            </ul>
-            
-            <h3 class="h6 mb-3 mt-4 text-muted">تکنولوژی‌ها</h3>
-            <ul class="list-unstyled skills">
-              <li class="skill-item">RestFul API</li>
-              <li class="skill-item">EF Core</li>
-              <li class="skill-item">Blazor</li>
-              <li class="skill-item">DDD</li>
-            </ul>
-            
-            <h3 class="h6 mb-3 mt-4 text-muted">ابزارها</h3>
-            <ul class="list-unstyled skills">
-              <li class="skill-item">Jira</li>
-              <li class="skill-item">Git</li>
-            </ul>
+          <div class="skills-grid">
+            <span class="skill-item">C#</span>
+            <span class="skill-item">Asp.net Core</span>
+            <span class="skill-item">OOP</span>
+            <span class="skill-item">Clean Code</span>
+            <span class="skill-item">RestFul API</span>
+            <span class="skill-item">EF Core</span>
+            <span class="skill-item">Blazor</span>
+            <span class="skill-item">DDD</span>
+            <span class="skill-item">Jira</span>
+            <span class="skill-item">Git</span>
           </div>
         </section>
 
-        <section class="mb-5" aria-labelledby="education-heading">
-          <h2 id="education-heading" class="section-heading">
-            <i class="fas fa-graduation-cap me-2" aria-hidden="true"></i>تحصیلات
+        <!-- Education Section -->
+        <section class="mb-5">
+          <h2 class="section-heading">
+            <i class="fas fa-graduation-cap me-2"></i>تحصیلات
           </h2>
-          <article class="card education-card">
-            <div class="card-body">
-              <h3 class="card-title text-primary h5">کارشناسی مهندسی نرم‌افزار</h3>
-              <p class="card-subtitle mb-2 text-muted">دانشگاه آزاد | 1401-1398</p>
-              <div class="mt-3">
-                <span class="badge bg-light text-dark">معدل: 17.5</span>
-              </div>
+          <div class="education-card">
+            <h3 class="education-title">کارشناسی مهندسی نرم‌افزار</h3>
+            <p class="education-school">دانشگاه آزاد</p>
+            <span class="experience-date">1401-1398</span>
+            <div class="mt-3">
+              <span class="gpa-badge">معدل: 17.5</span>
             </div>
-          </article>
+          </div>
         </section>
       </div>
     </div>
   </main>
 
-  <!-- Add JavaScript for smooth animations -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Add animation classes to elements
-      const cards = document.querySelectorAll('.card');
+      const cards = document.querySelectorAll('.experience-card, .education-card');
       cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
       });
 
-      // Animate elements on load
       setTimeout(() => {
         cards.forEach((card, index) => {
           setTimeout(() => {
